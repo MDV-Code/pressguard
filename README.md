@@ -1,79 +1,87 @@
-🛡️ PressGuard
-<h1 align="center">🛡️ PressGuard</h1> <p align="center">A secure PHP-based web application starter with a guided installer</p> <p align="center">Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit Installationsprogramm</p><div align="center"> <!--- Tabs Navigation --> <a href="#english">English</a> | <a href="#deutsch">Deutsch</a> </div><!--- English Content --><h2 id="english">🇺🇸 English Version</h2>
+# 🛡️ PressGuard
+
+<h1 align="center">🛡️ PressGuard</h1>
+<p align="center">A secure PHP-based web application starter with a guided installer</p>
+<p align="center">Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit Installationsprogramm</p>
+
+<div align="center">
+  <!--- Tabs Navigation -->
+  <a href="#english">English</a> | 
+  <a href="#deutsch">Deutsch</a>
+</div>
+
+<!--- English Content -->
+<h2 id="english">🇺🇸 English Version</h2>
 
 A secure PHP-based web application starter with a guided installer. PressGuard automatically sets up your database, admin account, environment configuration, and removes itself after completion for enhanced security.
 
-https://img.shields.io/badge/PHP-7.4%252B-777BB4?style=for-the-badge&logo=php
-https://img.shields.io/badge/MySQL-8.0%252B-4479A1?style=for-the-badge&logo=mysql
-https://img.shields.io/badge/Apache-2.4%252B-D22128?style=for-the-badge&logo=apache
-https://img.shields.io/badge/License-MIT-green?style=for-the-badge
-✨ Features
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql)
+![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-    🔐 Secure Admin Login – bcrypt-hashed passwords with session management
+## ✨ Features
 
-    ⚡ Step-by-Step Installer – Comprehensive system checks and configuration
+- 🔐 **Secure Admin Login** – bcrypt-hashed passwords with session management
+- ⚡ **Step-by-Step Installer** – Comprehensive system checks and configuration
+- 🗄️ **Automatic Database Setup** – Creates schema, tables, and initial admin user
+- 🛠️ **Self-Destruction Mechanism** – Installer auto-removes after successful setup
+- 🧱 **Security Hardened** – .htaccess protection and strict permission guidelines
+- 📱 **Fully Responsive** – Works seamlessly on desktop and mobile devices
 
-    🗄️ Automatic Database Setup – Creates schema, tables, and initial admin user
+## 📦 Installation
 
-    🛠️ Self-Destruction Mechanism – Installer auto-removes after successful setup
+### Prerequisites
 
-    🧱 Security Hardened – .htaccess protection and strict permission guidelines
+- PHP 7.4 or higher
+- MySQL 8.0 or higher
+- Apache web server with mod_rewrite enabled
+- Write permissions for web directory
 
-    📱 Fully Responsive – Works seamlessly on desktop and mobile devices
+### Quick Setup
 
-📦 Installation
-Prerequisites
+1. **Clone or download PressGuard**
+   ```bash
+   git clone https://github.com/yourname/pressguard.git /var/www/html/pressguard
+   ```
 
-    PHP 7.4 or higher
+2. **Set appropriate permissions**
+   ```bash
+   sudo chown -R www-data:www-data /var/www/html/pressguard
+   sudo chmod 755 /var/www/html/pressguard
+   sudo chmod 750 /var/www/html/pressguard/App/Config
+   ```
 
-    MySQL 8.0 or higher
+<details>
+<summary>👉 Click to expand full installation instructions</summary>
 
-    Apache web server with mod_rewrite enabled
+3. **Apache Configuration** (example vHost)
+   ```apache
+   <VirtualHost *:80>
+       ServerName example.com
+       DocumentRoot /var/www/html/pressguard
+       
+       <Directory /var/www/html/pressguard>
+           AllowOverride All
+           Require all granted
+       </Directory>
+   </VirtualHost>
+   ```
 
-    Write permissions for web directory
+4. **Enable rewrite module and reload Apache**
+   ```bash
+   sudo a2enmod rewrite
+   sudo systemctl reload apache2
+   ```
 
-Quick Setup
-
-    Clone or download PressGuard
-    bash
-
-git clone https://github.com/yourname/pressguard.git /var/www/html/pressguard
-
-Set appropriate permissions
-bash
-
-    sudo chown -R www-data:www-data /var/www/html/pressguard
-    sudo chmod 755 /var/www/html/pressguard
-    sudo chmod 750 /var/www/html/pressguard/App/Config
-
-<details> <summary>👉 Click to expand full installation instructions</summary>
-
-    Apache Configuration (example vHost)
-    apache
-
-<VirtualHost *:80>
-    ServerName example.com
-    DocumentRoot /var/www/html/pressguard
-    
-    <Directory /var/www/html/pressguard>
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
-
-Enable rewrite module and reload Apache
-bash
-
-    sudo a2enmod rewrite
-    sudo systemctl reload apache2
-
-    Run the installer
-    Navigate to http://your-domain.com/install.php and follow the guided setup process.
+5. **Run the installer**
+   Navigate to `http://your-domain.com/install.php` and follow the guided setup process.
 
 </details>
-📁 Project Structure
-text
 
+## 📁 Project Structure
+
+```
 pressguard/
 ├── index.php                 # Main application entry point
 ├── install.php              # Installer (auto-removes after setup)
@@ -92,26 +100,23 @@ pressguard/
 │   └── js/
 │       └── app.js          # Application JavaScript
 └── .htaccess               # Apache configuration and security rules
+```
 
-🔧 Installation Process
+## 🔧 Installation Process
 
 The guided installer will:
 
-    System Check - Verify PHP version, extensions, and directory permissions
+1. **System Check** - Verify PHP version, extensions, and directory permissions
+2. **Database Setup** - Create database schema and initial tables
+3. **Admin Creation** - Set up your first administrator account
+4. **Environment Configuration** - Generate secure .env file with your settings
+5. **Self-Cleanup** - Automatically remove the installer for security
 
-    Database Setup - Create database schema and initial tables
-
-    Admin Creation - Set up your first administrator account
-
-    Environment Configuration - Generate secure .env file with your settings
-
-    Self-Cleanup - Automatically remove the installer for security
-
-🔒 Security Hardening
+## 🔒 Security Hardening
 
 After installation, we recommend these additional security measures:
-bash
 
+```bash
 # Restrict .env file access
 chmod 640 /var/www/html/pressguard/App/Config/.env
 
@@ -120,113 +125,113 @@ find /var/www/html/pressguard -type d -exec chmod 755 {} \;
 
 # Set secure file permissions
 find /var/www/html/pressguard -type f -exec chmod 644 {} \;
+```
 
-⚠️ Security Notes
+## ⚠️ Security Notes
 
-    The .htaccess file blocks direct access to the App/ directory and .env files
+- The `.htaccess` file blocks direct access to the `App/` directory and `.env` files
+- The installer automatically deletes itself after successful completion
+- Always run the recommended hardening commands after installation
+- Never leave the installer accessible on a production server
 
-    The installer automatically deletes itself after successful completion
+## 🐛 Troubleshooting
 
-    Always run the recommended hardening commands after installation
+**Common issues:**
 
-    Never leave the installer accessible on a production server
+1. **Permission errors** - Ensure the web server has write access to the directory
+2. **mod_rewrite not working** - Verify `AllowOverride All` is set in your Apache configuration
+3. **PHP extensions missing** - Install required extensions (pdo_mysql, mbstring, etc.)
 
-🐛 Troubleshooting
-
-Common issues:
-
-    Permission errors - Ensure the web server has write access to the directory
-
-    mod_rewrite not working - Verify AllowOverride All is set in your Apache configuration
-
-    PHP extensions missing - Install required extensions (pdo_mysql, mbstring, etc.)
-
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-🤝 Contributing
+
+## 🤝 Contributing
 
 We welcome contributions! Please feel free to submit pull requests, open issues, or suggest new features.
-🆓 Free and Open Source
+
+## 🆓 Free and Open Source
 
 PressGuard is completely free and open source. If you find it useful, please consider giving it a star on GitHub!
 
-Disclaimer: While PressGuard includes security best practices, always perform your own security audit before deploying to production environments.
-<!--- German Content --><h2 id="deutsch">🇩🇪 Deutsche Version</h2>
+---
+
+**Disclaimer**: While PressGuard includes security best practices, always perform your own security audit before deploying to production environments.
+
+---
+
+<!--- German Content -->
+<h2 id="deutsch">🇩🇪 Deutsche Version</h2>
 
 Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Installationsprogramm. PressGuard richtet automatisch Ihre Datenbank, Admin-Konten, Umgebungskonfiguration ein und entfernt sich selbst nach Abschluss für erweiterte Sicherheit.
 
-https://img.shields.io/badge/PHP-7.4%252B-777BB4?style=for-the-badge&logo=php
-https://img.shields.io/badge/MySQL-8.0%252B-4479A1?style=for-the-badge&logo=mysql
-https://img.shields.io/badge/Apache-2.4%252B-D22128?style=for-the-badge&logo=apache
-https://img.shields.io/badge/Lizenz-MIT-green?style=for-the-badge
-✨ Funktionen
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql)
+![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
+![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green?style=for-the-badge)
 
-    🔐 Sicherer Admin-Login – Bcrypt-gehashte Passwörter mit Session-Management
+## ✨ Funktionen
 
-    ⚡ Schritt-für-Schritt Installer – Umfassende Systemchecks und Konfiguration
+- 🔐 **Sicherer Admin-Login** – Bcrypt-gehashte Passwörter mit Session-Management
+- ⚡ **Schritt-für-Schritt Installer** – Umfassende Systemchecks und Konfiguration
+- 🗄️ **Automatische Datenbankeinrichtung** – Erstellt Schema, Tabellen und initialen Admin-Benutzer
+- 🛠️ **Selbstzerstörungsmechanismus** – Installer entfernt sich nach erfolgreicher Einrichtung automatisch
+- 🧱 **Sicherheitsgehärtet** – .htaccess-Schutz und strenge Berechtigungsrichtlinien
+- 📱 **Vollständig responsiv** – Funktioniert nahtlos auf Desktop- und Mobilgeräten
 
-    🗄️ Automatische Datenbankeinrichtung – Erstellt Schema, Tabellen und initialen Admin-Benutzer
+## 📦 Installation
 
-    🛠️ Selbstzerstörungsmechanismus – Installer entfernt sich nach erfolgreicher Einrichtung automatisch
+### Voraussetzungen
 
-    🧱 Sicherheitsgehärtet – .htaccess-Schutz und strenge Berechtigungsrichtlinien
+- PHP 7.4 oder höher
+- MySQL 8.0 oder höher
+- Apache Webserver mit aktiviertem mod_rewrite
+- Schreibrechte für Webverzeichnis
 
-    📱 Vollständig responsiv – Funktioniert nahtlos auf Desktop- und Mobilgeräten
+### Schnelleinrichtung
 
-📦 Installation
-Voraussetzungen
+1. **PressGuard klonen oder herunterladen**
+   ```bash
+   git clone https://github.com/yourname/pressguard.git /var/www/html/pressguard
+   ```
 
-    PHP 7.4 oder höher
+2. **Angemessene Berechtigungen setzen**
+   ```bash
+   sudo chown -R www-data:www-data /var/www/html/pressguard
+   sudo chmod 755 /var/www/html/pressguard
+   sudo chmod 750 /var/www/html/pressguard/App/Config
+   ```
 
-    MySQL 8.0 oder höher
+<details>
+<summary>👉 Klicken Sie hier für vollständige Installationsanweisungen</summary>
 
-    Apache Webserver mit aktiviertem mod_rewrite
+3. **Apache-Konfiguration** (Beispiel vHost)
+   ```apache
+   <VirtualHost *:80>
+       ServerName example.com
+       DocumentRoot /var/www/html/pressguard
+       
+       <Directory /var/www/html/pressguard>
+           AllowOverride All
+           Require all granted
+       </Directory>
+   </VirtualHost>
+   ```
 
-    Schreibrechte für Webverzeichnis
+4. **Rewrite-Modul aktivieren und Apache neuladen**
+   ```bash
+   sudo a2enmod rewrite
+   sudo systemctl reload apache2
+   ```
 
-Schnelleinrichtung
-
-    PressGuard klonen oder herunterladen
-    bash
-
-git clone https://github.com/yourname/pressguard.git /var/www/html/pressguard
-
-Angemessene Berechtigungen setzen
-bash
-
-    sudo chown -R www-data:www-data /var/www/html/pressguard
-    sudo chmod 755 /var/www/html/pressguard
-    sudo chmod 750 /var/www/html/pressguard/App/Config
-
-<details> <summary>👉 Klicken Sie hier für vollständige Installationsanweisungen</summary>
-
-    Apache-Konfiguration (Beispiel vHost)
-    apache
-
-<VirtualHost *:80>
-    ServerName example.com
-    DocumentRoot /var/www/html/pressguard
-    
-    <Directory /var/www/html/pressguard>
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
-
-Rewrite-Modul aktivieren und Apache neuladen
-bash
-
-    sudo a2enmod rewrite
-    sudo systemctl reload apache2
-
-    Installer ausführen
-    Navigieren Sie zu http://ihre-domain.com/install.php und folgen Sie dem geführten Setup-Prozess.
+5. **Installer ausführen**
+   Navigieren Sie zu `http://ihre-domain.com/install.php` und folgen Sie dem geführten Setup-Prozess.
 
 </details>
-📁 Projektstruktur
-text
 
+## 📁 Projektstruktur
+
+```
 pressguard/
 ├── index.php                 # Haupt-Einstiegspunkt der Anwendung
 ├── install.php              # Installer (entfernt sich nach Setup automatisch)
@@ -245,26 +250,23 @@ pressguard/
 │   └── js/
 │       └── app.js          # Anwendungs-JavaScript
 └── .htaccess               # Apache-Konfiguration und Sicherheitsregeln
+```
 
-🔧 Installationsprozess
+## 🔧 Installationsprozess
 
 Der geführte Installer wird:
 
-    Systemcheck - PHP-Version, Erweiterungen und Verzeichnisberechtigungen überprüfen
+1. **Systemcheck** - PHP-Version, Erweiterungen und Verzeichnisberechtigungen überprüfen
+2. **Datenbank-Setup** - Datenbankschema und Initialtabellen erstellen
+3. **Admin-Erstellung** - Ihr erstes Administrator-Konto einrichten
+4. **Umgebungskonfiguration** - Sichere .env-Datei mit Ihren Einstellungen generieren
+5. **Selbstbereinigung** - Installer automatisch aus Sicherheitsgründen entfernen
 
-    Datenbank-Setup - Datenbankschema und Initialtabellen erstellen
-
-    Admin-Erstellung - Ihr erstes Administrator-Konto einrichten
-
-    Umgebungskonfiguration - Sichere .env-Datei mit Ihren Einstellungen generieren
-
-    Selbstbereinigung - Installer automatisch aus Sicherheitsgründen entfernen
-
-🔒 Sicherheitshärtung
+## 🔒 Sicherheitshärtung
 
 Nach der Installation empfehlen wir diese zusätzlichen Sicherheitsmaßnahmen:
-bash
 
+```bash
 # .env Dateizugriff einschränken
 chmod 640 /var/www/html/pressguard/App/Config/.env
 
@@ -273,40 +275,43 @@ find /var/www/html/pressguard -type d -exec chmod 755 {} \;
 
 # Sichere Dateiberechtigungen setzen
 find /var/www/html/pressguard -type f -exec chmod 644 {} \;
+```
 
-⚠️ Sicherheitshinweise
+## ⚠️ Sicherheitshinweise
 
-    Die .htaccess-Datei blockiert direkten Zugriff auf das App/-Verzeichnis und .env-Dateien
+- Die `.htaccess`-Datei blockiert direkten Zugriff auf das `App/`-Verzeichnis und `.env`-Dateien
+- Der Installer löscht sich nach erfolgreichem Abschluss automatisch
+- Führen Sie immer die empfohlenen Härtungsbefehle nach der Installation aus
+- Lassen Sie den Installer niemals auf einem Produktionsserver zugänglich
 
-    Der Installer löscht sich nach erfolgreichem Abschluss automatisch
+## 🐛 Problembehandlung
 
-    Führen Sie immer die empfohlenen Härtungsbefehle nach der Installation aus
+**Häufige Probleme:**
 
-    Lassen Sie den Installer niemals auf einem Produktionsserver zugänglich
+1. **Berechtigungsfehler** - Stellen Sie sicher, dass der Webserver Schreibzugriff auf das Verzeichnis hat
+2. **mod_rewrite funktioniert nicht** - Überprüfen Sie, ob `AllowOverride All` in Ihrer Apache-Konfiguration gesetzt ist
+3. **Fehlende PHP-Erweiterungen** - Installieren Sie benötigte Erweiterungen (pdo_mysql, mbstring, etc.)
 
-🐛 Problembehandlung
-
-Häufige Probleme:
-
-    Berechtigungsfehler - Stellen Sie sicher, dass der Webserver Schreibzugriff auf das Verzeichnis hat
-
-    mod_rewrite funktioniert nicht - Überprüfen Sie, ob AllowOverride All in Ihrer Apache-Konfiguration gesetzt ist
-
-    Fehlende PHP-Erweiterungen - Installieren Sie benötigte Erweiterungen (pdo_mysql, mbstring, etc.)
-
-📄 Lizenz
+## 📄 Lizenz
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe LICENSE-Datei für Details.
-🤝 Mitwirken
+
+## 🤝 Mitwirken
 
 Wir freuen uns über Beiträge! Bitte zögern Sie nicht, Pull Requests einzureichen, Issues zu öffnen oder neue Funktionen vorzuschlagen.
-🆓 Kostenlos und Open Source
+
+## 🆓 Kostenlos und Open Source
 
 PressGuard ist komplett kostenlos und Open Source. Wenn Sie es nützlich finden, erwägen Sie bitte, es auf GitHub mit einem Stern zu bewerten!
 
-Haftungsausschluss: Während PressGuard Sicherheits-Best-Practices enthält, führen Sie bitte immer Ihr eigenes Security-Audit durch, bevor Sie es in Produktionsumgebungen einsetzen.
-📄 License / Lizenz
+---
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+**Haftungsausschluss**: Während PressGuard Sicherheits-Best-Practices enthält, führen Sie bitte immer Ihr eigenes Security-Audit durch, bevor Sie es in Produktionsumgebungen einsetzen.
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe LICENSE-Datei für Details.
+---
+
+## 📄 License / Lizenz
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE)-Datei für Details.
