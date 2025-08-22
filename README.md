@@ -1,4 +1,4 @@
-<h1 align="center">🛡️ PressGuard</h1>
+<h1>🛡️ PressGuard</h1>
 <p align="center">A secure PHP-based web application starter with a guided installer</p>
 <p align="center">Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit Installationsprogramm</p>
 
