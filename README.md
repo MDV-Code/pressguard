@@ -21,6 +21,22 @@ A secure PHP-based web application starter with a guided installer. PressGuard a
 ![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
+## ⚠️ GitHub Restriction Notice
+
+GitHub automatically blocks `install.php` files for security reasons. Therefore, the installer is provided as:
+
+**📁 Filename:** `pressguard-installer.php`
+
+**After download, rename it:**
+```bash
+mv pressguard-installer.php install.php
+```
+
+**Or access it directly at:**
+```
+http://your-domain.com/pressguard-installer.php
+```
+
 ## ✨ Features
 
 - 🔐 **Secure Admin Login** – bcrypt-hashed passwords with session management
@@ -76,7 +92,7 @@ A secure PHP-based web application starter with a guided installer. PressGuard a
    ```
 
 5. **Run the installer**
-   Navigate to `http://your-domain.com/install.php` and follow the guided setup process.
+   Navigate to `http://your-domain.com/pressguard-installer.php` and follow the guided setup process.
 
 </details>
 
@@ -85,7 +101,7 @@ A secure PHP-based web application starter with a guided installer. PressGuard a
 ```
 pressguard/
 ├── index.php                 # Main application entry point
-├── install.php              # Installer (auto-removes after setup)
+├── pressguard-installer.php # Installer (auto-removes after setup)
 ├── App/
 │   ├── autoloader.php       # Class autoloader
 │   ├── Config/
@@ -174,6 +190,22 @@ Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Install
 ![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
 ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green?style=for-the-badge)
 
+## ⚠️ GitHub Einschränkungshinweis
+
+GitHub blockiert `install.php`-Dateien automatisch aus Sicherheitsgründen. Daher finden Sie den Installer als:
+
+**📁 Dateiname:** `pressguard-installer.php`
+
+**Nach dem Download umbennen:**
+```bash
+mv pressguard-installer.php install.php
+```
+
+**Oder direkt aufrufen unter:**
+```
+http://ihre-domain.com/pressguard-installer.php
+```
+
 ## ✨ Funktionen
 
 - 🔐 **Sicherer Admin-Login** – Bcrypt-gehashte Passwörter mit Session-Management
@@ -229,7 +261,7 @@ Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Install
    ```
 
 5. **Installer ausführen**
-   Navigieren Sie zu `http://ihre-domain.com/install.php` und folgen Sie dem geführten Setup-Prozess.
+   Navigieren Sie zu `http://ihre-domain.com/pressguard-installer.php` und folgen Sie dem geführten Setup-Prozess.
 
 </details>
 
@@ -238,7 +270,7 @@ Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Install
 ```
 pressguard/
 ├── index.php                 # Haupt-Einstiegspunkt der Anwendung
-├── install.php              # Installer (entfernt sich nach Setup automatisch)
+├── pressguard-installer.php # Installer (entfernt sich nach Setup automatisch)
 ├── App/
 │   ├── autoloader.php       # Klassen-Autoloader
 │   ├── Config/
@@ -308,7 +340,7 @@ Wir freuen uns über Beiträge! Bitte zögern Sie nicht, Pull Requests einzureic
 
 ## 🆓 Kostenlos und Open Source
 
-PressGuard ist komplett kostenlos und Open Source. Wenn Sie it nützlich finden, erwägen Sie bitte, es auf GitHub mit einem Stern zu bewerten!
+PressGuard ist komplett kostenlos und Open Source. Wenn Sie es nützlich finden, erwägen Sie bitte, es auf GitHub mit einem Stern zu bewerten!
 
 ---
 
