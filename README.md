@@ -15,6 +15,7 @@
 
 A secure PHP-based web application starter with a guided installer. PressGuard automatically sets up your database, admin account, environment configuration, and removes itself after completion for enhanced security.
 
+![Debian](https://img.shields.io/badge/Debian-12%2B-A81D33?style=for-the-badge&logo=debian)
 ![PHP](https://img.shields.io/badge/PHP-8.4%2B-777BB4?style=for-the-badge&logo=php)
 ![MariaDB](https://img.shields.io/badge/MariaDB-10.5%2B-003545?style=for-the-badge&logo=mariadb)
 ![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
@@ -165,6 +166,7 @@ PressGuard is completely free and open source. If you find it useful, please con
 
 Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Installationsprogramm. PressGuard richtet automatisch Ihre Datenbank, Admin-Konten, Umgebungskonfiguration ein und entfernt sich selbst nach Abschluss für erweiterte Sicherheit.
 
+![Debian](https://img.shields.io/badge/Debian-12%2B-A81D33?style=for-the-badge&logo=debian)
 ![PHP](https://img.shields.io/badge/PHP-8.4%2B-777BB4?style=for-the-badge&logo=php)
 ![MariaDB](https://img.shields.io/badge/MariaDB-10.5%2B-003545?style=for-the-badge&logo=mariadb)
 ![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
