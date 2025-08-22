@@ -57,7 +57,7 @@ http://your-domain.com/pressguard-installer.php
 
 1. **Clone or download PressGuard**
    ```bash
-   git clone https://github.com/yourname/pressguard.git /var/www/html/pressguard
+   git clone https://github.com/MDV-Code/pressguard.git /var/www/html/pressguard
    ```
 
 2. **Set appropriate permissions**
@@ -226,7 +226,7 @@ http://ihre-domain.com/pressguard-installer.php
 
 1. **PressGuard klonen oder herunterladen**
    ```bash
-   git clone https://github.com/yourname/pressguard.git /var/www/html/pressguard
+   git clone https://github.com/MDV-Code/pressguard.git /var/www/html/pressguard
    ```
 
 2. **Angemessene Berechtigungen setzen**
