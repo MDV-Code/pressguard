@@ -312,6 +312,4 @@ PressGuard ist komplett kostenlos und Open Source. Wenn Sie es nützlich finden,
 
 ## 📄 License / Lizenz
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE)-Datei für Details.
