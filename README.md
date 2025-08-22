@@ -15,8 +15,8 @@
 
 A secure PHP-based web application starter with a guided installer. PressGuard automatically sets up your database, admin account, environment configuration, and removes itself after completion for enhanced security.
 
-![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php)
-![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql)
+![PHP](https://img.shields.io/badge/PHP-8.4%2B-777BB4?style=for-the-badge&logo=php)
+![MariaDB](https://img.shields.io/badge/MariaDB-10.5%2B-003545?style=for-the-badge&logo=mariadb)
 ![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
@@ -33,7 +33,7 @@ A secure PHP-based web application starter with a guided installer. PressGuard a
 
 ### Prerequisites
 
-- PHP 7.4 or higher
+- PHP 8.4 or higher
 - MySQL 8.0 or higher
 - Apache web server with mod_rewrite enabled
 - Write permissions for web directory
@@ -165,8 +165,8 @@ PressGuard is completely free and open source. If you find it useful, please con
 
 Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Installationsprogramm. PressGuard richtet automatisch Ihre Datenbank, Admin-Konten, Umgebungskonfiguration ein und entfernt sich selbst nach Abschluss für erweiterte Sicherheit.
 
-![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php)
-![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql)
+![PHP](https://img.shields.io/badge/PHP-8.4%2B-777BB4?style=for-the-badge&logo=php)
+![MariaDB](https://img.shields.io/badge/MariaDB-10.5%2B-003545?style=for-the-badge&logo=mariadb)
 ![Apache](https://img.shields.io/badge/Apache-2.4%2B-D22128?style=for-the-badge&logo=apache)
 ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green?style=for-the-badge)
 
@@ -183,7 +183,7 @@ Ein sicheres PHP-basiertes Webanwendungs-Starterkit mit einem geführten Install
 
 ### Voraussetzungen
 
-- PHP 7.4 oder höher
+- PHP 8.4 oder höher
 - MySQL 8.0 oder höher
 - Apache Webserver mit aktiviertem mod_rewrite
 - Schreibrechte für Webverzeichnis
