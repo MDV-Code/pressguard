@@ -100,7 +100,7 @@ pressguard/
 │   │   └── app.css         # Application styles
 │   └── js/
 │       └── app.js          # Application JavaScript
-└── .htaccess               # Apache configuration and security rules
+└── .htaccess               # Apache configuration and security rules (auto-generated)
 ```
 
 ## 🔧 Installation Process
@@ -111,7 +111,8 @@ The guided installer will:
 2. **Database Setup** - Create database schema and initial tables
 3. **Admin Creation** - Set up your first administrator account
 4. **Environment Configuration** - Generate secure .env file with your settings
-5. **Self-Cleanup** - Automatically remove the installer for security
+5. **Security Configuration** - Automatically create .htaccess file with proper security rules
+6. **Self-Cleanup** - Automatically remove the installer for security
 
 ## 🔒 Security Hardening
 
@@ -130,7 +131,8 @@ find /var/www/html/pressguard -type f -exec chmod 644 {} \;
 
 ## ⚠️ Security Notes
 
-- The `.htaccess` file blocks direct access to the `App/` directory and `.env` files
+- **Auto-generated .htaccess** - The installer automatically creates a secure .htaccess file after permission verification
+- The .htaccess file blocks direct access to the `App/` directory and `.env` files
 - The installer automatically deletes itself after successful completion
 - Always run the recommended hardening commands after installation
 - Never leave the installer accessible on a production server
@@ -251,7 +253,7 @@ pressguard/
 │   │   └── app.css         # Anwendungs-Styles
 │   └── js/
 │       └── app.js          # Anwendungs-JavaScript
-└── .htaccess               # Apache-Konfiguration und Sicherheitsregeln
+└── .htaccess               # Apache-Konfiguration und Sicherheitsregeln (automatisch generiert)
 ```
 
 ## 🔧 Installationsprozess
@@ -262,7 +264,8 @@ Der geführte Installer wird:
 2. **Datenbank-Setup** - Datenbankschema und Initialtabellen erstellen
 3. **Admin-Erstellung** - Ihr erstes Administrator-Konto einrichten
 4. **Umgebungskonfiguration** - Sichere .env-Datei mit Ihren Einstellungen generieren
-5. **Selbstbereinigung** - Installer automatisch aus Sicherheitsgründen entfernen
+5. **Sicherheitskonfiguration** - Automatische Erstellung der .htaccess-Datei mit entsprechenden Sicherheitsregeln
+6. **Selbstbereinigung** - Installer automatisch aus Sicherheitsgründen entfernen
 
 ## 🔒 Sicherheitshärtung
 
@@ -281,7 +284,8 @@ find /var/www/html/pressguard -type f -exec chmod 644 {} \;
 
 ## ⚠️ Sicherheitshinweise
 
-- Die `.htaccess`-Datei blockiert direkten Zugriff auf das `App/`-Verzeichnis und `.env`-Dateien
+- **Automatisch generierte .htaccess** - Der Installer erstellt nach der Berechtigungsprüfung automatisch eine sichere .htaccess-Datei
+- Die .htaccess-Datei blockiert direkten Zugriff auf das `App/`-Verzeichnis und `.env`-Dateien
 - Der Installer löscht sich nach erfolgreichem Abschluss automatisch
 - Führen Sie immer die empfohlenen Härtungsbefehle nach der Installation aus
 - Lassen Sie den Installer niemals auf einem Produktionsserver zugänglich
@@ -304,7 +308,7 @@ Wir freuen uns über Beiträge! Bitte zögern Sie nicht, Pull Requests einzureic
 
 ## 🆓 Kostenlos und Open Source
 
-PressGuard ist komplett kostenlos und Open Source. Wenn Sie es nützlich finden, erwägen Sie bitte, es auf GitHub mit einem Stern zu bewerten!
+PressGuard ist komplett kostenlos und Open Source. Wenn Sie it nützlich finden, erwägen Sie bitte, es auf GitHub mit einem Stern zu bewerten!
 
 ---
 
